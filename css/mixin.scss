@@ -1,0 +1,11 @@
+@import url(../fonts/MuseoSans/stylesheet.css);
+@mixin container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+@mixin mainFonts {
+  font-family: 'MuseoModerno', sans-serif;
+  font-style: normal;
+  text-align: center;
+}
