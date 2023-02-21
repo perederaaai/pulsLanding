@@ -257,7 +257,6 @@ body {
   justify-content: space-between;
   gap: 2em;
   align-items: center;
-  height: 1000px;
 }
 .catalog-wrap h2 {
   text-transform: uppercase;
@@ -306,23 +305,24 @@ body {
   justify-items: center;
 }
 .catalog-wrap .catalog__product-wrap .catalog__product {
-  width: 90%;
+  width: 88%;
   align-items: center;
   border: 2px solid rgb(232, 232, 232);
   padding: 20px;
   box-sizing: border-box;
 }
 .catalog-wrap .catalog__product-wrap .catalog__product .catalog__product-more__info {
-  display: flex;
   align-items: stretch;
+  display: none;
 }
 .catalog-wrap .catalog__product-wrap .catalog__product .catalog__product-more__info ul li {
+  text-align: start;
   align-items: flex-end;
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
   color: #555555;
-  list-style: none;
+  list-style-image: url("../img/07_catalog/marker.svg");
 }
 .catalog-wrap .catalog__product-wrap .catalog__product h3 {
   font-weight: 700;
@@ -379,6 +379,102 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
   cursor: pointer;
+}
+
+.review {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 25px 0;
+  font-family: "MuseoModerno", sans-serif;
+  font-style: normal;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+.review__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  color: #0D0D0D;
+}
+.review__container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 50px;
+  align-items: center;
+  justify-items: center;
+}
+.review__container-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: start;
+}
+.review__name {
+  align-items: flex-end;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: #0D0D0D;
+}
+.review__marathon {
+  color: #646464;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 2px 0;
+}
+.review__text {
+  color: #0D0D0D;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.contact {
+  min-height: 515px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.contact img {
+  max-width: 100%;
+  height: 100%;
+}
+.contact__box {
+  position: absolute;
+  width: 30%;
+  height: 40%;
+  padding: 10px;
+  background: #C70101;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contact__box-address {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+}
+.contact__box-tel {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+.contact__box-social-media {
+  display: flex;
+  flex-direction: row;
+  width: 212px;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */
