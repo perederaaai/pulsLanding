@@ -1,5 +1,10 @@
 @import url(../fonts/MuseoSans/stylesheet.css);
 @import "slick.css";
+@media (min-width: 980px) {
+  .contact__box {
+    width: 35%;
+  }
+}
 body {
   max-width: 1920px;
   margin: 0 auto;
@@ -452,32 +457,27 @@ body {
   justify-content: center;
   position: relative;
 }
-.contact img {
-  max-width: 100%;
-  height: 100%;
-}
 .contact__box {
   position: absolute;
-  width: 30%;
-  height: 40%;
+  width: 25%;
+  height: 30%;
   padding: 10px;
   background: #C70101;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  font-size: 20px;
 }
 .contact__box-address {
   color: #FFFFFF;
   font-weight: 500;
-  font-size: 20px;
   line-height: 20px;
 }
 .contact__box-tel {
   color: #FFFFFF;
   text-decoration: none;
   font-weight: 700;
-  font-size: 20px;
   line-height: 20px;
 }
 .contact__box-social-media {
@@ -485,6 +485,12 @@ body {
   flex-direction: row;
   width: 212px;
   justify-content: space-between;
+}
+
+@media (max-width: 980px) {
+  .contact__box {
+    width: 35%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
