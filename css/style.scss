@@ -1,5 +1,5 @@
 @import url(../fonts/MuseoSans/stylesheet.css);
-
+@import "slick.css";
 
 @mixin container {
   max-width: 1140px;
@@ -168,6 +168,7 @@ body {
 .consultation-wrap {
   background: url("../img/05_consultation/bg.svg") center no-repeat;
   color: #FFFFFF;
+  padding: 0 20px;
 
   .consultation-content {
     @include container;
@@ -230,23 +231,29 @@ body {
 .slider {
   @include container;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding: 40px 0;
+  gap: 20px;
+  padding: 40px 20px;
+  img{
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  a{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+  }
 
   .slider__arrow {
     background-color: #FFFFFF;
     border: none;
     cursor: pointer;
   }
+}
 
-  .two {
-    display: none;
-  }
-
-  .three {
-    display: none;
-  }
+.slick-slider{
+  display: flex;
 }
 
 .catalog-wrap {
@@ -296,8 +303,9 @@ body {
 
   .catalog__product-wrap {
     display: grid;
-    min-width: 90%;
-    grid-template-columns: repeat(3, 1fr);
+    min-width: 80%;
+
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
     align-items: center;
     justify-items: center;

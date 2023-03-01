@@ -1,4 +1,5 @@
 @import url(../fonts/MuseoSans/stylesheet.css);
+@import "slick.css";
 body {
   max-width: 1920px;
   margin: 0 auto;
@@ -154,6 +155,7 @@ body {
 .consultation-wrap {
   background: url("../img/05_consultation/bg.svg") center no-repeat;
   color: #FFFFFF;
+  padding: 0 20px;
 }
 .consultation-wrap .consultation-content {
   max-width: 1140px;
@@ -228,20 +230,28 @@ body {
   text-align: center;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding: 40px 0;
+  gap: 20px;
+  padding: 40px 20px;
+}
+.slider img {
+  margin: 0 auto;
+  max-width: 100%;
+}
+.slider a {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
 }
 .slider .slider__arrow {
   background-color: #FFFFFF;
   border: none;
   cursor: pointer;
 }
-.slider .two {
-  display: none;
-}
-.slider .three {
-  display: none;
+
+.slick-slider {
+  display: flex;
 }
 
 .catalog-wrap {
@@ -298,8 +308,8 @@ body {
 }
 .catalog-wrap .catalog__product-wrap {
   display: grid;
-  min-width: 90%;
-  grid-template-columns: repeat(3, 1fr);
+  min-width: 80%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
   align-items: center;
   justify-items: center;
