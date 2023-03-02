@@ -1,10 +1,6 @@
 @import url(../fonts/MuseoSans/stylesheet.css);
 @import "slick.css";
-@media (min-width: 980px){
-  .contact__box{
-    width: 35%;
-  }
-}
+
 @mixin container {
   max-width: 1140px;
   margin: 0 auto;
@@ -285,12 +281,18 @@ body {
       background: url("../img/06_slider/tabBg.svg") no-repeat;
       width: 222px;
       height: 50px;
+      & button{
+        cursor: pointer;
+
+      }
     }
 
-    .catalog__btn:hover {
-      background: url("../img/06_slider/tabBgActive.svg") no-repeat;
+    .catalog__btn{
+      button:hover {
+        background: url("../img/06_slider/tabBgActive.svg") no-repeat;
+        color: #fff ;
+      }
     }
-
     button {
       background: none;
       border: none;
@@ -311,22 +313,36 @@ body {
 
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
+    grid-auto-rows: 444px;
     align-items: center;
     justify-items: center;
-
     .catalog__product {
       width: 88%;
+      height: 100%;
       align-items: center;
       border: 2px solid rgba(232, 232, 232, 1);
       padding: 20px;
       box-sizing: border-box;
-      .catalog__product-main{
-        //display: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      overflow: hidden;
+      &-main{
+        width: 200%;
+        margin: 0 auto;
+        display: flex;
+        &__content{
+          width: 50%;
+        }
+
       }
       .catalog__product-more__info{
-
-        align-items: stretch;
-        display: none;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        //display: none;
+        flex-direction: column;
+        justify-content: space-between;
         ul{
           li{
             text-align: start;
@@ -337,6 +353,15 @@ body {
             color: #555555;
             list-style-image: url("../img/07_catalog/marker.svg");
           }
+        }
+      }
+
+      .catalog__product-main:hover{
+        .catalog__product-main__content {
+          transform: translate(100%);
+        }
+        .catalog__product-more__info {
+          transform: translate(-100%);
         }
       }
       h3 {
@@ -396,6 +421,7 @@ body {
         }
       }
     }
+
   }
 }
 
@@ -451,8 +477,7 @@ body {
 }
 
 .contact{
-  //background: url("../img/09_contacts/map.svg") center no-repeat;
-  //background-size: 100% auto;
+
   min-height: 515px;
   display: flex;
   justify-content: center;
@@ -491,6 +516,10 @@ body {
   .contact__box{
     width: 35%;
   }
+  *{
+    padding: 0 3px;
+  }
+
 }
 
 
