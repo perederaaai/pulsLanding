@@ -3,18 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Pulse - top of 2022</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="fonts/MuseoSans/stylesheet.css">
-  <link rel="stylesheet" href="css/mixin.css">
-  <link rel="stylesheet" href="css/slick.css">
-
+  <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
 <div class="page-wrap">
   <div class="first-screen__wrap">
     <div class="first-screen__header">
       <div class="logo">
-        <img src="img/01_header/logo.svg" alt="">
+        <img src="img/01_header/logo.svg" alt="" class="logo-img ">
       </div>
       <div class="representative">
         <div class="representative__title">Официальный представитель</div>
@@ -22,7 +18,7 @@
       </div>
       <div class="tell-number">
         <a href="tel:+74999228974">+7 (499) 922-89-74</a>
-        <button type="button">
+        <button type="button" data-modal="consultation">
           заказать звонок
         </button>
       </div>
@@ -49,7 +45,7 @@
         </div>
       </div>
       <div class="first-screen__main-content-btn">
-        <button type="button">
+        <button type="button" data-modal="consultation" class="give-consultation">
           заказать кОНСУЛЬТАЦИЮ
         </button>
         <div class="first-screen__main-content-btn catalog">
@@ -75,7 +71,7 @@
             готовятся к соревнованиям по триатлону!</p>
         </div>
         <div class="advantage__item-content">
-          <img src="img/04_advantageItem/heart.svg" alt="">
+          <img src="img/04_advantageItem/heart.svg" alt="" class="advantage__item-content-heart">
           <h3>Заботимся о здоровье</h3>
           <p>Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим
             близким!</p>
@@ -103,7 +99,7 @@
           <input type="text" placeholder="Ваше имя">
           <input type="number" placeholder="Ваш телефон">
           <input type="email" placeholder="Ваш E-mail">
-          <button type="submit">
+          <button type="submit" >
             заказать кОНСУЛЬТАЦИЮ
           </button>
         </div>
@@ -134,13 +130,13 @@
   <div class="catalog-wrap">
     <h2>Каталог пульсометров</h2>
     <div class="catalog__puls-type">
-      <div class="catalog__btn active">
+      <div class="catalog__btn catalog__btn-active">
         <button type="button" class="catalog__puls-type-one">Для фитнеса</button>
       </div>
-      <div class="catalog__btn active">
+      <div class="catalog__btn">
         <button type="button" class="catalog__puls-type-two">для бега</button>
       </div>
-      <div class="catalog__btn active">
+      <div class="catalog__btn">
         <button type="button" class="catalog__puls-type-three">для триатлона</button>
       </div>
     </div>
@@ -148,17 +144,17 @@
     <div class="catalog__product-wrap">
       <div class="catalog__product one">
         <div class="catalog__product-main">
-         <div class="catalog__product-main__content">
-           <img src="img/07_catalog/polar01.svg" alt="">
-           <h3>
-             Пульсометр Polar FT1
-           </h3>
-           <p>
-             Для первых шагов в тренировках, основанных на сердечном ритме
-           </p>
-           <a href="#" class="catalog__product-more">ПОДРОБНЕЕ</a>
-         </div>
-          <div class="catalog__product-more__info">
+          <div class="catalog__product-main__content catalog__product-main__content-active">
+            <img src="img/07_catalog/polar01.svg" alt="">
+            <h3>
+              Пульсометр Polar FT1
+            </h3>
+            <p>
+              Для первых шагов в тренировках, основанных на сердечном ритме
+            </p>
+            <a href="#" class="catalog__product-more catalog__product-more-active">ПОДРОБНЕЕ</a>
+          </div>
+          <div class="catalog__product-more__info catalog__product-more__info-active">
             <ul>
               <li>
                 Вы услышите звуковое оповещение о нужном пульсе во время тренировки;
@@ -463,21 +459,79 @@
 
   <div class="contact">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1607.2611968863773!2d37.64542865880901!3d55.768390288033615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2sua!4v1677694006871!5m2!1sru!2sua"
-             width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy"
+            width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div class="contact__box">
-            <div class="contact__box-address">
-              Москва, Мясницкий проезд, д.3с1
+      <div class="contact__box-address">
+        Москва, Мясницкий проезд, д.3с1
+      </div>
+      <a class="contact__box-tel" href="tel:+84999228974">
+        8 (499) 922-89-74
+      </a>
+      <div class="contact__box-social-media">
+        <a href="https://uk-ua.facebook.com/" target="_blank"> <img src="img/09_contacts/fb.svg" alt=""></a>
+        <a href="https://instagram.com" target="_blank"> <img src="img/09_contacts/inst.svg" alt=""></a>
+        <a href="https://ru.pinterest.com/" target="_blank"> <img src="img/09_contacts/pin.svg" alt=""></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="overlay">
+    <div class="modal" id="consultation">
+      <div class="modal__close">&times;</div>
+      <div class="modal__sub">
+        <p>Просто заполните форму заявки</p>
+      </div>
+      <div class="modal__descr">
+        и мы перезвоним вам в течении 10 минут
+      </div>
+      <div class="modal__form-wrap">
+
+        <div class="consultation-content">
+          <form action="#">
+            <div class="consultation-form">
+              <input type="text" placeholder="Ваше имя">
+              <input type="number" placeholder="Ваш телефон">
+              <input type="email" placeholder="Ваш E-mail">
+              <button type="submit">
+                заказать кОНСУЛЬТАЦИЮ
+              </button>
             </div>
-            <a class="contact__box-tel" href="tel:+84999228974">
-              8 (499) 922-89-74
-            </a>
-            <div class="contact__box-social-media">
-              <a href="https://uk-ua.facebook.com/" target="_blank"> <img src="img/09_contacts/fb.svg" alt=""></a>
-              <a href="instagram.com" target="_blank"> <img src="img/09_contacts/inst.svg" alt=""></a>
-              <a href="https://ru.pinterest.com/" target="_blank"> <img src="img/09_contacts/pin.svg" alt=""></a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="order">
+      <div class="modal__close">&times;</div>
+      <div class="modal__sub">
+        <p>Ваш заказ:</p>
+      </div>
+      <div class="modal__descr">
+        Пульсометр Polar FT1
+      </div>
+      <div class="modal__form-wrap">
+
+        <div class="consultation-content">
+          <form action="#">
+            <div class="consultation-form">
+              <input type="text" placeholder="Ваше имя">
+              <input type="number" placeholder="Ваш телефон">
+              <input type="email" placeholder="Ваш E-mail">
+              <button type="submit">
+                купить
+              </button>
             </div>
-          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal__message" id="thanks">
+      <div class="modal__close">&times;</div>
+      <div class="modal__message-sub">Спасибо за вашу заявку!</div>
+      <div class="modal__message-descr">Наш менеджер свяжется с вами <br>в ближайшее время!</div>
+    </div>
+
   </div>
 </div>
 
@@ -485,13 +539,13 @@
 </script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js">
 </script>
-<script type="text/javascript" src="slick/slick.min.js">
+<script type="text/javascript" src="js/slick.min.js">
 </script>
 <script src="js/slick.min.js">
 </script>
-<script src="js/script.js"></script>
+<script src="js/script.js">
 
 </script>
-</script>
+
 </body>
 </html>

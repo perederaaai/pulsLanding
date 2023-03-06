@@ -1,5 +1,7 @@
 @import url(../fonts/MuseoSans/stylesheet.css);
 @import "slick.css";
+@import "animation.css";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 body {
   max-width: 1920px;
   margin: 0 auto;
@@ -157,7 +159,8 @@ body {
   color: #FFFFFF;
   padding: 0 20px;
 }
-.consultation-wrap .consultation-content {
+
+.consultation-content {
   max-width: 1140px;
   margin: 0 auto;
   padding: 25px 0;
@@ -172,7 +175,7 @@ body {
   min-height: 680px;
   gap: 15px;
 }
-.consultation-wrap .consultation-content h2 {
+.consultation-content h2 {
   text-align: left;
   text-transform: uppercase;
   font-weight: 700;
@@ -180,31 +183,33 @@ body {
   line-height: 54px;
   margin-bottom: 0;
 }
-.consultation-wrap .consultation-content p {
+.consultation-content p {
   text-align: left;
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
 }
-.consultation-wrap .consultation-content .consultation-form {
+.consultation-content .consultation-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
   min-width: 380px;
+  align-items: center;
 }
-.consultation-wrap .consultation-content .consultation-form input {
+.consultation-content .consultation-form input {
   height: 52px;
   background-color: #FFFFFF;
   border: none;
   border-radius: 5px;
   padding: 10px;
+  width: 28em;
 }
-.consultation-wrap .consultation-content .consultation-form input::-webkit-outer-spin-button,
-.consultation-wrap .consultation-content .consultation-form input::-webkit-inner-spin-button {
+.consultation-content .consultation-form input::-webkit-outer-spin-button,
+.consultation-content .consultation-form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.consultation-wrap .consultation-content .consultation-form button {
+.consultation-content .consultation-form button {
   background: #C70101;
   border-radius: 5px;
   border: none;
@@ -219,6 +224,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 25px;
+  width: 25em;
 }
 
 .slider {
@@ -294,9 +300,11 @@ body {
 .catalog-wrap .catalog__puls-type .catalog__btn button {
   cursor: pointer;
 }
-.catalog-wrap .catalog__puls-type .catalog__btn button:hover {
+.catalog-wrap .catalog__puls-type .catalog__btn-active {
   background: url("../img/06_slider/tabBgActive.svg") no-repeat;
-  color: #fff;
+}
+.catalog-wrap .catalog__puls-type .catalog__btn-active button {
+  color: #FFFFFF;
 }
 .catalog-wrap .catalog__puls-type button {
   background: none;
@@ -355,11 +363,13 @@ body {
   color: #555555;
   list-style-image: url("../img/07_catalog/marker.svg");
 }
-.catalog-wrap .catalog__product-wrap .catalog__product .catalog__product-main:hover .catalog__product-main__content {
+.catalog-wrap .catalog__product-wrap .catalog__product .catalog__product-main__content-active {
   transform: translate(100%);
+  transition: 1s;
 }
-.catalog-wrap .catalog__product-wrap .catalog__product .catalog__product-main:hover .catalog__product-more__info {
+.catalog-wrap .catalog__product-wrap .catalog__product .catalog__product-more__info-active {
   transform: translate(-100%);
+  transition: 1s;
 }
 .catalog-wrap .catalog__product-wrap .catalog__product h3 {
   font-weight: 700;
@@ -509,12 +519,125 @@ body {
   justify-content: space-between;
 }
 
+.consultation-content {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 25px 0;
+  font-family: "MuseoModerno", sans-serif;
+  font-style: normal;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 680px;
+  gap: 15px;
+}
+.consultation-content h2 {
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  margin-bottom: 0;
+}
+.consultation-content p {
+  text-align: left;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.56);
+  display: none;
+}
+.overlay .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #F2F2F2;
+  width: 28em;
+  height: 28em;
+}
+.overlay .modal__close {
+  position: absolute;
+  top: -10px;
+  right: -30px;
+  color: #C70101;
+  font-size: 35px;
+  cursor: pointer;
+}
+.overlay .modal__sub {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 19px;
+  text-align: center;
+}
+.overlay .modal__subp {
+  margin-bottom: 9px;
+}
+.overlay .modal__sub__form-wrap {
+  height: 100%;
+}
+.overlay .modal__descr {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+}
+.overlay .modal .consultation-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 26em;
+  height: 25em;
+  box-sizing: border-box;
+  min-height: 83%;
+}
+.overlay .modal__message {
+  height: 9em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.overlay .modal__message-sub {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 19px;
+}
+.overlay .modal__message-descr {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+}
+.overlay #consultation, .overlay #order, .overlay #thanks {
+  display: none;
+}
+
 @media (max-width: 980px) {
   .contact__box {
     width: 35%;
   }
   * {
     padding: 0 3px;
+  }
+  .modal__form-wrap * {
+    font-size: 12px;
+  }
+  .modal__form-wrap .consultation-form input, .modal__form-wrap .consultation-form button {
+    width: 26em;
+    height: 4em;
+    font-size: 12px;
+    padding: 12px;
   }
 }
 
